@@ -5,6 +5,7 @@ import DestinationSelector from './components/DestinationSelector'
 function App() {
 
   const [tours, setTours] = useState(); // storing data in a tours state variable
+  const [destination, setDestination] = useState('All Options');
   const [loading, setLoading] = useState(true);
   const [error,setError] = useState(null);
 
@@ -42,7 +43,11 @@ function App() {
       loading={loading}
       error={error}  
      />
-    <DestinationSelector tours={tours}/>
+    <DestinationSelector 
+    tours={tours}
+    destination={destination}
+    setDestination = {setDestination}
+    />
   </div>
   ) 
 };
