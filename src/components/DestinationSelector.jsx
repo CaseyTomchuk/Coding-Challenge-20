@@ -12,7 +12,7 @@ return (
 <div>
     <label>Filter Destination: </label>
     <select value = {destination} onChange = {filterDestination}>
-        <option>All options</option>
+        <option>All Options</option>
             {tours?.map((tour) => (
             <option key = {tour.id}>
                 {tour.name}
@@ -28,7 +28,6 @@ export default DestinationSelector
 
 // NOTES: 
 // <select> automatically listens for onChange
-// map is confusing
 // the ? in tours?.map only maps existing tours to avoid errors
 // had to add keys to the list because of a warning in the console
 // filtering tours is different that filtering destination, and will be done in Gallery
