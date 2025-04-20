@@ -38,16 +38,17 @@ function App() {
  return (
   <div id = "appDiv">
     <h1> Tour Destination Selector </h1>
-    <Gallery
-      tours={tours}
-      loading={loading}
-      error={error}  
-     />
     <DestinationSelector 
     tours={tours}
     destination={destination}
     setDestination = {setDestination}
     />
+    <Gallery
+      tours={tours}
+      loading={loading}
+      error={error}  
+      destination = {destination}
+     />
   </div>
   ) 
 };
