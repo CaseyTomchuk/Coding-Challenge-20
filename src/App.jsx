@@ -35,6 +35,12 @@ function App() {
 
 }, []); // end of useEffect
 
+// removes a tour and updates the state to reflect that
+function handleRemove(id) {
+  const newTours = tours.filter((tour) => tour.id !== id);
+  setTours(newTours);
+}
+
  return (
   <div id = "appDiv">
     <h1> Tour Destination Selector </h1>
@@ -48,6 +54,7 @@ function App() {
       loading={loading}
       error={error}  
       destination = {destination}
+      handleRemove={handleRemove}
      />
   </div>
   ) 
